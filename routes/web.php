@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('homepage');
 
 
 Route::group(['prefix' => 'admin'], function () {

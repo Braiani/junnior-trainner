@@ -24,4 +24,9 @@ class StaffService
     {
         return $this->staffRepository->all();
     }
+
+    public function activeStaff()
+    {
+        return $this->staffRepository->active();
+    }
 }

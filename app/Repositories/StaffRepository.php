@@ -19,4 +19,13 @@ class StaffRepository extends BaseRepository
         $this->model = $model;
     }
 
+    public function active($active = true)
+    {
+        $where = [
+            'column' => 'active',
+            'operator' => '=',
+            'value' => $active
+        ];
+        return $this->findAndGet(['*'], [], $where);
+    }
 }

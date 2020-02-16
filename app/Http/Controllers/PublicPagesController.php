@@ -20,7 +20,7 @@ class PublicPagesController extends Controller
 
     public function index()
     {
-        $staff = $this->staffService->allStaff();
+        $staff = $this->staffService->activeStaff();
         return view('welcome', compact('staff'));
     }
 }

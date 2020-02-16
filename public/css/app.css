@@ -3,6 +3,13 @@
     position: absolute;
 }
 
+div.description {
+    color: #777777;
+}
+.avatar > img {
+    height: 104px;
+}
+
 @media screen and (max-aspect-ratio: 1920/1080) {
     #introVideo {
         left: -100%;

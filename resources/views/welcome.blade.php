@@ -100,15 +100,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="info-icon">
-                    {{--<div class="icon text-danger">
-                        <i class="pe-7s-graph1"></i>
-                    </div>--}}
-                    <h3>Sales</h3>
-                    <p class="description">We make our design perfect for you. Our adjustment turn our clothes into your clothes.</p>
+            @foreach($services as $service)
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        {{--<div class="icon text-danger">
+                            <i class="pe-7s-graph1"></i>
+                        </div>--}}
+                        <h3>{{ $service->title }}</h3>
+                        <div class="description">{!! $service->body !!}</div>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

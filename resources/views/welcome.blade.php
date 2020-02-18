@@ -96,7 +96,7 @@
             <div class="title-area">
                 <h2>Nossos serviços</h2>
                 <div class="separator separator-danger">✻</div>
-                <p class="description">We promise you a new look and more importantly, a new attitude. We build that by getting to know you, your needs and creating the best looking clothes.</p>
+                <p class="description">{{ setting('landing.text_our_services') }}</p>
             </div>
         </div>
         <div class="row">
@@ -109,25 +109,6 @@
                     <p class="description">We make our design perfect for you. Our adjustment turn our clothes into your clothes.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="info-icon">
-                    {{--<div class="icon text-danger">
-                        <i class="pe-7s-note2"></i>
-                    </div>--}}
-                    <h3>Content</h3>
-                    <p class="description">We create a persona regarding the multiple wardrobe accessories that we provide..</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="info-icon">
-                    {{--<div class="icon text-danger">
-                        <i class="pe-7s-music"></i>
-                    </div>--}}
-                    <h3>Music</h3>
-                    <p class="description">We like to present the world with our work, so we make sure we spread the word regarding our clothes.</p>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
@@ -236,17 +217,18 @@
 <div class="section section-small section-get-started">
     <div class="parallax filter">
         <div class="image"
-             style="background-image: url('img/office-1.jpeg')">
+             style="background-image: url({{ Voyager::image(setting('landing.background_change_life', '/img/office-01.jpeg')) }})">
         </div>
         <div class="container">
             <div class="title-area">
                 <h2 class="text-white">Você também quer mudar de vida?</h2>
                 <div class="separator line-separator">♦</div>
-                <p class="description"> We are keen on creating a second skin for anyone with a sense of style! We design our clothes having our customers in mind and we never disappoint!</p>
+                <p class="description"> {{ setting('landing.text_change_life') }}</p>
             </div>
 
             <div class="button-get-started">
-                <a href="#gaia" class="btn btn-danger btn-fill btn-lg">Entrar em contato!</a>
+                <a href="https://api.whatsapp.com/send?phone={{setting('landing.cellphone')}}&text={{urlencode(setting('landing.contact_whatsapp'))}}"
+                    class="btn btn-danger btn-fill btn-lg">Entrar em contato!</a>
             </div>
         </div>
     </div>

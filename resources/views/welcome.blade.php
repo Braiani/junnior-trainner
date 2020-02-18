@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="button-get-started">
-                    <a href="https://api.whatsapp.com/send?phone={{setting('landing.cellphone')}}&text={{urldecode(setting('landing.contact_whatsapp'))}}"
+                    <a href="https://api.whatsapp.com/send?phone={{setting('landing.cellphone')}}&text={{urlencode(setting('landing.contact_whatsapp'))}}"
                        target="_blank" class="btn
                     btn-white btn-fill btn-lg ">
                         Saiba mais
@@ -255,7 +255,7 @@
 
 <footer class="footer footer-big footer-color-black" data-color="black">
     <div class="container">
-        <div class="row">
+        {{--<div class="row">
             <div class="col-md-2 col-sm-3">
                 <div class="info">
                     <h5 class="title">Company</h5>
@@ -353,9 +353,10 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr>--}}
+        <div class="separator line-separator">♦</div>
         <div class="copyright">
-            © <script> document.write(new Date().getFullYear()) </script> Creative Tim, made with love
+            © <script> document.write(new Date().getFullYear()) </script> Creative Tim and <a href="http://brtechsistemas.com.br" target="_blank">BR tech Sistemas</a>, made with love
         </div>
     </div>
 </footer>

@@ -171,45 +171,31 @@
         </div>
 
         <ul class="nav nav-text" role="tablist">
-            <li class="active">
-                <a href="#testimonial1" role="tab" data-toggle="tab">
-                    <div class="image-clients">
-                        <img alt="..." class="img-circle" src="{{ asset('/img/faces/face_5.jpg') }}"/>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#testimonial2" role="tab" data-toggle="tab">
-                    <div class="image-clients">
-                        <img alt="..." class="img-circle" src="{{ asset('/img/faces/face_6.jpg') }}"/>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#testimonial3" role="tab" data-toggle="tab">
-                    <div class="image-clients">
-                        <img alt="..." class="img-circle" src="{{ asset('/img/faces/face_2.jpg') }}"/>
-                    </div>
-                </a>
-            </li>
+            @foreach($comments as $comment)
+                <li class="{{ !$loop->first ?: 'active' }}">
+                    <a href="#testimonial-{{$comment->id}}" role="tab" data-toggle="tab">
+                        <div class="image-clients">
+                            <img alt="..." class="img-circle" src="{{ Voyager::image($comment->photo ?? 'users/default.png') }}"/>
+                        </div>
+                    </a>
+                </li>
+            @endforeach
         </ul>
 
 
         <div class="tab-content">
-            <div class="tab-pane active" id="testimonial1">
-                <p class="description">
-                    And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color... Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all!
-                </p>
+            @foreach($comments as $comment)
+            <div class="tab-pane {{ !$loop->first ?: 'active' }}" id="testimonial-{{$comment->id}}">
+                <div class="description">
+                    {!! $comment->comment !!}
+                </div>
+                <div class="separator separator-success">✻</div>
+                <div class="blockquote-reverse">
+                    <p class="description mb-0">Autor: {{ $comment->author }}</p>
+                    <p class="description">Comentado em: {{ $comment->updated_at->format('d/m/Y H:i') }}</p>
+                </div>
             </div>
-            <div class="tab-pane" id="testimonial2">
-                <p class="description">Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all! And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color...
-                </p>
-            </div>
-            <div class="tab-pane" id="testimonial3">
-                <p class="description"> I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. The 'Gaia' team did a great work while we were collaborating. They provided a vision that was in deep connection with our needs and helped us achieve our goals.
-                </p>
-            </div>
-
+            @endforeach
         </div>
 
     </div>

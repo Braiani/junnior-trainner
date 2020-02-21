@@ -10,6 +10,10 @@ div.description {
     height: 104px;
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+
 @media screen and (max-aspect-ratio: 1920/1080) {
     #introVideo {
         left: -100%;

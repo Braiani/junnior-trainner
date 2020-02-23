@@ -14,4 +14,8 @@ return [
     'comments'                => 'Comentários',
     'comment_link_text'       => 'Ver todos os comentários',
     'comment_text'            => 'Tem :count :string no seu banco de dados. Clique no botão abaixo para ver tudo.',
+    'client'                 => 'Cliente',
+    'clients'                => 'Clientes',
+    'client_link_text'       => 'Ver todos os clientes',
+    'client_text'            => 'Tem :count :string no seu banco de dados. Clique no botão abaixo para ver tudo.',
 ];

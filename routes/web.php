@@ -17,3 +17,5 @@ Route::get('/', 'PublicPagesController@index')->name('homepage');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/area-cliente', '\TCG\Voyager\Http\Controllers\VoyagerAuthController@login')->name('client.area');

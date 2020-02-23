@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+<nav class="navbar navbar-default navbar-burger navbar-transparent navbar-fixed-top" color-on-scroll="200">
     <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
     <div class="container">
         <div class="navbar-header">
@@ -13,8 +13,11 @@
             </a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right navbar-uppercase">
+            <ul class="nav navbar-nav navbar-uppercase">
                 <li class="dropdown">
+                    <a href="{{ route('client.area') }}" class="dropdown">
+                        Área do Cliente
+                    </a>
                     <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-share-alt"></i> Redes Sociais
                     </a>

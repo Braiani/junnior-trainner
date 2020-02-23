@@ -4,18 +4,12 @@ namespace App\Widgets;
 
 use App\Repositories\CommentRepository;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
-use TCG\Voyager\Widgets\BaseDimmer;
 
-class CommentsWidget extends BaseDimmer
+class CommentsWidget extends BaseWidget
 {
-    /**
-     * The configuration array.
-     *
-     * @var array
-     */
-    protected $config = [];
 
     /**
      * Treat this method as a controller action.
@@ -32,11 +26,15 @@ class CommentsWidget extends BaseDimmer
             'icon' => 'voyager-chat',
             'title' => "{$count} {$string}",
             'text' => __('voyager::dimmer.comment_text', ['count' => $count, 'string' => Str::lower($string)]),
-            'button' => [
-                'text' => __('voyager::dimmer.comment_link_text'),
-                'link' => route('voyager.comments.index'),
-            ],
             'image' => "https://source.unsplash.com/collection/4819637/1920x1080/",
         ]));
+    }
+
+    protected function shouldDisplayButton()
+    {
+        if (!Auth::user()->hasRole('admin')) {
+            return;
+        }
+        parent::shouldDisplayButton();
     }
 }

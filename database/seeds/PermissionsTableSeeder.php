@@ -225,6 +225,166 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-01-26 06:26:09',
                 'updated_at' => '2020-01-26 06:26:09',
             ),
+            26 => 
+            array (
+                'id' => 27,
+                'key' => 'browse_staff',
+                'table_name' => 'staff',
+                'created_at' => '2020-02-16 12:45:08',
+                'updated_at' => '2020-02-16 12:45:08',
+            ),
+            27 => 
+            array (
+                'id' => 28,
+                'key' => 'read_staff',
+                'table_name' => 'staff',
+                'created_at' => '2020-02-16 12:45:08',
+                'updated_at' => '2020-02-16 12:45:08',
+            ),
+            28 => 
+            array (
+                'id' => 29,
+                'key' => 'edit_staff',
+                'table_name' => 'staff',
+                'created_at' => '2020-02-16 12:45:08',
+                'updated_at' => '2020-02-16 12:45:08',
+            ),
+            29 => 
+            array (
+                'id' => 30,
+                'key' => 'add_staff',
+                'table_name' => 'staff',
+                'created_at' => '2020-02-16 12:45:08',
+                'updated_at' => '2020-02-16 12:45:08',
+            ),
+            30 => 
+            array (
+                'id' => 31,
+                'key' => 'delete_staff',
+                'table_name' => 'staff',
+                'created_at' => '2020-02-16 12:45:08',
+                'updated_at' => '2020-02-16 12:45:08',
+            ),
+            31 => 
+            array (
+                'id' => 32,
+                'key' => 'browse_services',
+                'table_name' => 'services',
+                'created_at' => '2020-02-18 00:01:16',
+                'updated_at' => '2020-02-18 00:01:16',
+            ),
+            32 => 
+            array (
+                'id' => 33,
+                'key' => 'read_services',
+                'table_name' => 'services',
+                'created_at' => '2020-02-18 00:01:16',
+                'updated_at' => '2020-02-18 00:01:16',
+            ),
+            33 => 
+            array (
+                'id' => 34,
+                'key' => 'edit_services',
+                'table_name' => 'services',
+                'created_at' => '2020-02-18 00:01:16',
+                'updated_at' => '2020-02-18 00:01:16',
+            ),
+            34 => 
+            array (
+                'id' => 35,
+                'key' => 'add_services',
+                'table_name' => 'services',
+                'created_at' => '2020-02-18 00:01:16',
+                'updated_at' => '2020-02-18 00:01:16',
+            ),
+            35 => 
+            array (
+                'id' => 36,
+                'key' => 'delete_services',
+                'table_name' => 'services',
+                'created_at' => '2020-02-18 00:01:16',
+                'updated_at' => '2020-02-18 00:01:16',
+            ),
+            36 => 
+            array (
+                'id' => 37,
+                'key' => 'browse_comments',
+                'table_name' => 'comments',
+                'created_at' => '2020-02-20 23:53:28',
+                'updated_at' => '2020-02-20 23:53:28',
+            ),
+            37 => 
+            array (
+                'id' => 38,
+                'key' => 'read_comments',
+                'table_name' => 'comments',
+                'created_at' => '2020-02-20 23:53:28',
+                'updated_at' => '2020-02-20 23:53:28',
+            ),
+            38 => 
+            array (
+                'id' => 39,
+                'key' => 'edit_comments',
+                'table_name' => 'comments',
+                'created_at' => '2020-02-20 23:53:28',
+                'updated_at' => '2020-02-20 23:53:28',
+            ),
+            39 => 
+            array (
+                'id' => 40,
+                'key' => 'add_comments',
+                'table_name' => 'comments',
+                'created_at' => '2020-02-20 23:53:28',
+                'updated_at' => '2020-02-20 23:53:28',
+            ),
+            40 => 
+            array (
+                'id' => 41,
+                'key' => 'delete_comments',
+                'table_name' => 'comments',
+                'created_at' => '2020-02-20 23:53:28',
+                'updated_at' => '2020-02-20 23:53:28',
+            ),
+            41 => 
+            array (
+                'id' => 42,
+                'key' => 'browse_clients',
+                'table_name' => 'clients',
+                'created_at' => '2020-02-23 16:36:10',
+                'updated_at' => '2020-02-23 16:36:10',
+            ),
+            42 => 
+            array (
+                'id' => 43,
+                'key' => 'read_clients',
+                'table_name' => 'clients',
+                'created_at' => '2020-02-23 16:36:10',
+                'updated_at' => '2020-02-23 16:36:10',
+            ),
+            43 => 
+            array (
+                'id' => 44,
+                'key' => 'edit_clients',
+                'table_name' => 'clients',
+                'created_at' => '2020-02-23 16:36:10',
+                'updated_at' => '2020-02-23 16:36:10',
+            ),
+            44 => 
+            array (
+                'id' => 45,
+                'key' => 'add_clients',
+                'table_name' => 'clients',
+                'created_at' => '2020-02-23 16:36:10',
+                'updated_at' => '2020-02-23 16:36:10',
+            ),
+            45 => 
+            array (
+                'id' => 46,
+                'key' => 'delete_clients',
+                'table_name' => 'clients',
+                'created_at' => '2020-02-23 16:36:10',
+                'updated_at' => '2020-02-23 16:36:10',
+            ),
         ));
         
         

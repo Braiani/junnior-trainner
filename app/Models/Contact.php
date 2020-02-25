@@ -2,9 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Contact extends Model
+class Contact extends BaseModel
 {
-    //
+    protected $fillable = ['number', 'whatsapp', 'instagram', 'client_id'];
+
+    protected $casts = [
+        'whatsapp' => 'boolean'
+    ];
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

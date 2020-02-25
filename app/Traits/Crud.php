@@ -17,4 +17,9 @@ trait Crud
             return $q->where($where['column'], $where['operator'], $where['value']);
         })->select($select)->with($with)->get();
     }
+
+    public function create(array $data)
+    {
+        return $this->model->create($data);
+    }
 }

@@ -19,4 +19,8 @@ class ClientRepository extends BaseRepository
         $this->model = $model;
     }
 
+    public function saveContactRelation(Client $client, array $data)
+    {
+        return $client->contacts()->createMany($data);
+    }
 }

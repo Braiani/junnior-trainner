@@ -18,6 +18,12 @@ trait Crud
         })->select($select)->with($with)->get();
     }
 
+    public function findById($id, $select = ['*'], $with = [])
+    {
+        return $this->model->where('id', $id)
+                ->select($select)->with($with)->first();
+    }
+
     public function create(array $data)
     {
         return $this->model->create($data);

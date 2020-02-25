@@ -33,6 +33,20 @@ class ClientService extends BaseService
         return view('clients.add', compact('dataType'));
     }
 
+    public function show(Request $request, $id)
+    {
+        $slug = $this->getSlug($request);
+
+        $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
+
+        // Check permission
+        $this->authorize('read', app($dataType->model_name));
+
+        $client = $this->clientRepository->findById($id, ['*'], ['contacts', 'indicatedBy']);
+
+        return view('clients.view', compact('dataType', 'client'));
+    }
+
     public function store(array $data)
     {
         $dataType = Voyager::model('DataType')->where('slug', 'clients')->first();

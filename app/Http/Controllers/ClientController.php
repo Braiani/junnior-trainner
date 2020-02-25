@@ -20,6 +20,11 @@ class ClientController extends VoyagerBaseController
         $this->clientService = $clientService;
     }
 
+    public function show(Request $request, $id)
+    {
+        return $this->clientService->show($request, $id);
+    }
+
 
     public function create(Request $request)
     {

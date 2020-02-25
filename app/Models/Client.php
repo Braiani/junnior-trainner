@@ -6,9 +6,13 @@ class Client extends BaseModel
 {
     protected $fillable = ['name', 'email', 'birthday', 'gender', 'client_id'];
 
+    protected $casts = [
+        'birthday' => 'date'
+    ];
+
     public function indicatedBy()
     {
-        return $this->hasOne(Client::class);
+        return $this->hasOne(Client::class, 'id', 'client_id');
     }
 
     public function contacts()

@@ -62,7 +62,7 @@
                                     @endforeach
                                 @endif
                             </div>
-                            <div class="form-group col-md-4 {{ $errors->has('birthday') ? 'has-error' : '' }}" >
+                            <div class="form-group col-md-6 {{ $errors->has('birthday') ? 'has-error' : '' }}" >
                                 <label class="control-label" for="birthday">Data de nascimento</label>
                                 <input type="date" name="birthday" id="birthday" class="form-control" placeholder="Data de nascimento">
                                 @if ($errors->has('birthday'))
@@ -71,16 +71,7 @@
                                     @endforeach
                                 @endif
                             </div>
-                            <div class="form-group col-md-4 {{ $errors->has('cpf') ? 'has-error' : '' }}" >
-                                <label class="control-label" for="cpf">CPF</label>
-                                <input type="text" name="cpf" id="cpf" class="form-control" placeholder="CPF">
-                                @if ($errors->has('cpf'))
-                                    @foreach ($errors->get('cpf') as $error)
-                                        <span class="help-block">{{ $error }}</span>
-                                    @endforeach
-                                @endif
-                            </div>
-                            <div class="form-group col-md-4 {{ $errors->has('gender') ? 'has-error' : '' }}" >
+                            <div class="form-group col-md-6 {{ $errors->has('gender') ? 'has-error' : '' }}" >
                                 <label class="control-label" for="gender">Gênero</label>
                                 <select name="gender" id="gender" class="form-control select2" placeholder="Gênero">
                                     <option value="M">Masculino</option>
@@ -117,13 +108,13 @@
                                         <input type="text" name="number[]" class="form-control number" placeholder="Número de telefone">
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <label for="whatsapp" class="control-label">Tem WhatsApp?</label>
+                                        <label for="number" class="control-label">Tem WhatsApp?</label>
                                         <br>
                                         <input type="checkbox" name="whatsapp[0]" class="checkbox" value="true">
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="instagram" class="control-label">Conta no Instagram</label>
-                                        <input type="text" name="instagram[]" class="form-control instagram" placeholder="Conta no Instagram">
+                                        <label for="number" class="control-label">Conta no Instagram</label>
+                                        <input type="text" name="instagram[]" class="form-control" placeholder="Conta no Instagram">
                                     </div>
                                     <div class="form-group col-md-2 remove-contact hidden">
                                         <h1 class="text-center"><i class="voyager-trash"></i></h1>
@@ -150,23 +141,9 @@
 @endsection
 
 @section('javascript')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script>
         $('document').ready(function () {
             $('.toggleswitch').bootstrapToggle();
-
-            $('#cpf').mask('000.000.000-00', {reverse: true});
-
-            var SPMaskBehavior = function (val) {
-                    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-                },
-                spOptions = {
-                    onKeyPress: function(val, e, field, options) {
-                        field.mask(SPMaskBehavior.apply({}, arguments), options);
-                    }
-                };
-
-            $('.number').mask(SPMaskBehavior, spOptions);
 
             $('.form-group input[type=date]').each(function (idx, elt) {
                 if (elt.hasAttribute('data-datepicker')) {
@@ -186,7 +163,6 @@
                 $(cloned).find(':input').val("");
 
                 $('.contact-div-append').append(cloned);
-                $('.number').mask(SPMaskBehavior, spOptions);
                 if ($(this).siblings('.remove-contact').hasClass('hidden')) {
                     $(this).siblings('.remove-contact').removeClass('hidden');
                 }
@@ -205,12 +181,6 @@
                 }
                 toastr.error('Ao menos 1 contato deve existir!');
             });
-
-            $('.instagram').on('keydown', function () {
-                if($(this).val() < 1) {
-                    $(this).val('@');
-                }
-            })
         });
 
         function resetCheckboxesNames() {

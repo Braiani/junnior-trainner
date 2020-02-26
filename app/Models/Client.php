@@ -4,7 +4,7 @@ namespace App\Models;
 
 class Client extends BaseModel
 {
-    protected $fillable = ['name', 'email', 'birthday', 'gender', 'client_id'];
+    protected $fillable = ['name', 'email', 'cpf', 'birthday', 'gender', 'client_id'];
 
     protected $casts = [
         'birthday' => 'date'

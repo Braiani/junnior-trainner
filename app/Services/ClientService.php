@@ -57,6 +57,7 @@ class ClientService extends BaseService
         $clientData = [
             'name' => $data['name'],
             'email' => $data['email'],
+            'cpf' => $data['cpf'],
             'birthday' => $data['birthday'] ?? null,
             'gender' => $data['gender'] ?? null,
             'client_id' => $data['client_id'] ?? null,

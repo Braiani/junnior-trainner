@@ -32,6 +32,11 @@ class ClientAddRequest extends FormRequest
                 'required',
                 'email'
             ],
+            'cpf' => [
+                'required',
+                'string',
+                'size:14'
+            ],
             'birthday' => [
                 'nullable'
             ],

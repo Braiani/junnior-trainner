@@ -115,7 +115,7 @@
                             <h3 class="panel-title">Instagram</h3>
                         </div>
                         <div class="panel-body" style="padding-top:0;">
-                            <p>{{ '@' . $contact->instagram ?? '' }}</p>
+                            <p>{{ $contact->instagram ?? '' }}</p>
                         </div>
                         <hr style="margin:0;">
                     </div>

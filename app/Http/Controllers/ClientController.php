@@ -31,8 +31,18 @@ class ClientController extends VoyagerBaseController
         return $this->clientService->create($request);
     }
 
+    public function edit(Request $request, $id)
+    {
+        return $this->clientService->edit($request, $id);
+    }
+
     public function storeValidated(ClientAddRequest $request)
     {
         return $this->clientService->store($request->validated());
+    }
+
+    public function updateValidated(ClientAddRequest $request, $id)
+    {
+        return $this->clientService->update($request->validated(), $id);
     }
 }

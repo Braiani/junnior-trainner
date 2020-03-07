@@ -28,4 +28,14 @@ trait Crud
     {
         return $this->model->create($data);
     }
+
+    public function update(array $data, $id)
+    {
+        return $this->findById($id)->update($data);
+    }
+
+    public function delete($id)
+    {
+        return $this->findById($id)->delete();
+    }
 }

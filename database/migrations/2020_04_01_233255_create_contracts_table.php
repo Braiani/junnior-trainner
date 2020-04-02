@@ -20,6 +20,7 @@ class CreateContractsTable extends Migration
             $table->date('due_date');
             $table->decimal('amount');
             $table->integer('installments')->nullable();
+            $table->boolean('active');
             $table->timestamps();
 
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');

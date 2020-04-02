@@ -18,4 +18,8 @@ return [
     'clients'                => 'Clientes',
     'client_link_text'       => 'Ver todos os clientes',
     'client_text'            => 'Tem :count :string no seu banco de dados. Clique no botão abaixo para ver tudo.',
+    'contract'                 => 'Contrato',
+    'contracts'                => 'Contratos',
+    'contract_link_text'       => 'Ver todos os contratos',
+    'contract_text'            => 'Tem :count :string no seu banco de dados. Clique no botão abaixo para ver tudo.',
 ];

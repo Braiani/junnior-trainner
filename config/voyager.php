@@ -146,6 +146,7 @@ return [
         'widgets' => [
             'App\\Widgets\\CommentsWidget',
             'App\\Widgets\\ClientsWidget',
+            'App\\Widgets\\ContractsWidget',
         ],
 
     ],
